@@ -2,7 +2,13 @@
 # Database Migration - Backend
 
 Backend for migrating a MySQL project from a local database to a cloud (Azure) platform.
+## how it works
+create _history_table to store updates in the old db  
+create triggers for INSERT, UPDATE, DELETE and use (old_primary_keys, version_number) as composite primary key   
+update the tables according to the latest version for each row that was updated according to the history table  
 
+
+check the table_names, check the total row numbers, check random percentage of rows data (ORDER BY RAND()), check all rows data
 ## Set up
 
 ### Set up virtual environment
