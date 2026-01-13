@@ -8,6 +8,9 @@ create triggers for INSERT, UPDATE, DELETE and use (old_primary_keys, version_nu
 update the tables according to the latest version for each row that was updated according to the history table  
 
 
+for updates use INSERT ... ON DUPLICATE KEY UPDATE
+for delete just use delete by primary key
+
 check the table_names, check the total row numbers, check random percentage of rows data (ORDER BY RAND()), check all rows data
 ## Set up
 
